@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - main
+    tags:
+      - platform-*
+
+jobs:
+  deploy:
+    name: deploy-platform
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "Deploying to production server on branch $GITHUB_REF"
