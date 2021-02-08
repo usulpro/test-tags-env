@@ -16,4 +16,4 @@ jobs:
       - uses: actions/checkout@v2
       - run: echo "::debug::{Deploying to production server on branch $SANITY_STUDIO_RELEASE}"
         env:
-          SANITY_STUDIO_RELEASE: ${{ GITHUB_REF }}
+          SANITY_STUDIO_RELEASE: $GITHUB_REF
